@@ -14,7 +14,7 @@ public class OrderRegistrationUseCase : IOrderRegistrationUseCase
         var order = new Order(customer, product)
         {
             IsElegible = IsOrderEligible.Execute(customer, product),
-            Dicount = CalculateDiscount.Execute(customer)
+            Discount = CalculateDiscount.Execute(customer)
         };
 
         //TODO : Register in Database
